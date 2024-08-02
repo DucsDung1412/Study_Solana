@@ -1,10 +1,11 @@
 import { AppProps } from "next/app";
-import Head from "next/head"; // Correct import for Head component
+import Head from "next/head";
 import { FC } from "react";
 import { ContextProvider } from "../contexts/ContextProvider";
-// import { AppBar } from "../components/AppBar";
-// import { Footer } from "../components/Footer";
+import { AppBar } from "../components/AppBar";
+import { Footer } from "../components/Footer";
 import Notification from "../components/Notification";
+import "../styles/testa.css"
 
 // Correct the import path for styles
 import '@solana/wallet-adapter-react-ui/styles.css';
@@ -18,9 +19,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <ContextProvider>
         <Notification />
-        {/* <AppBar /> */}
+        <AppBar />
         <Component {...pageProps} />
-        {/* <Footer /> */}
+        <Footer />
       </ContextProvider>
 
       {/* SCRIPTS */}
